@@ -5,9 +5,9 @@ header-img: img/post-bg-desk.jpg
 email: muzimumuli@gmail.com
 description: "Every failure is leading towards success."
 keyword: "BY, BY Blog, 李林的博客, lilin, 李林, iOS, Apple, iPhone"
-url: "http://lilin94.github.io"          # your host, for absolute URL
+url: "http://johnli-helloworld.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/lilin94/lilin94.github.io.git" # you code repository
+github_repo: "https://github.com/johnli-helloworld/johnli-helloworld.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -20,7 +20,7 @@ sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's us
 RSS: false
 weibo_username:     岁月de离间之计
 zhihu_username:     程序猿
-github_username:    lilin94
+github_username:    johnli-helloworld
 #twitter_username:   qiubaiying
 
 
@@ -62,9 +62,9 @@ gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: f2c84e7629bb1446c1a4                            #生成的clientID
   clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
-  repo: lilin94.github.io    #仓库名称
-  owner: lilin94    #github用户名
-  admin: lilin94
+  repo: johnli-helloworld.github.io    #仓库名称
+  owner: johnli-helloworld    #github用户名
+  admin: johnli-helloworld
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
