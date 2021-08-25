@@ -1,4 +1,16 @@
-## git base 命令使用
+---
+layout:     post
+title:      Git rebase 修改/合并commit记录
+subtitle:   rebase妙用
+date:       2021-8-22
+author:     xiaoli
+header-img: img/post-bg-debug.png
+catalog: true
+tags:
+    - 终端
+    - Git
+---
+# **git rebase** 命令使用
 
 - [1 git设置默认编辑为vim](#git设置默认编辑为vim)
 
@@ -10,16 +22,16 @@
 
 
 
-## 1 git设置默认编辑为vim
+## 1. git设置默认编辑为vim
 ``` sh
 export GIT_EDITOR=vim
 ```
 
 ## 2. git修改已提交的记录的用户名邮箱信息
 
-### 2.1 修改某次提交的用户信息
+#### 2.1 修改某次提交的用户信息
 
-- 第一步，使用git log命令查看版本记录，选取你需要修改的某次提交的后一个提交的SHA1 ID值（如我需要修改Author: john的这次提交的用户名和邮箱，则我需要选取下面列SHA1 ID为`010da6f5` 印象八位即可）， git log 显示如下:
+第一步，使用 **git log** 命令查看版本记录，选取你需要修改的某次提交的后一个提交的SHA1 ID值（如我需要修改Author: john的这次提交的用户名和邮箱，则我需要选取下面列SHA1 ID为`010da6f5` 印象八位即可）显示如下:
 
 ```sh
 # git log
@@ -40,7 +52,7 @@ Author: way <way.w.y@foxmail.com>
 Date:   Thu Aug 22 15:44:35 2019 +0800
 ```
 
-- 第二步，回到命令，开始执行rebase  -i 操作， 如下:
+第二步，回到命令，开始执行 **git rebase -i** **{commitid}** 操作,如下:
 
 ```sh
 # git rebase -i 010da6f5
@@ -57,7 +69,7 @@ pick 5f5d2a8 modify go get
 ...
 ```
 
-- 第三步，修改第一行数据（就是我们预期修改的那条commit）的pick为edit，如下：
+第三步，修改第一行数据（就是我们预期修改的那条commit）的 **pick** 变为 **edit**，如下：
 
 ```
 edit 949ee40 go-filecoin api v0.0.1
@@ -97,7 +109,7 @@ Once you are satisfied with your changes, run
 
 
 
-### 2.2 批量修改提交的用户信息
+#### 2.2 批量修改提交的用户信息
 
 新建脚本文件modify-userinfo.sh，内容如下：
 
@@ -118,8 +130,8 @@ git filter-branch --force --env-filter '
 ```
 
 
-
-## 合并多次提交记录
+------------------------------------------------------------------
+## 3.合并多次提交记录
 
 如下，我想合并最新的两次请求：
 
