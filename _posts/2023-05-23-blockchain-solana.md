@@ -4,7 +4,7 @@ title:      Solana共识
 subtitle:   bsc-relayer 剖析
 date:       2023-05-18
 author:     xiaoli
-header-img: img/post-bg-debug.jpg
+header-img: img/post-bg-debug.png
 catalog: true
 tags:
     - BlockChain

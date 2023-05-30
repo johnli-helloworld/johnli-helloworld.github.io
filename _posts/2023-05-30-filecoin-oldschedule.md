@@ -4,7 +4,7 @@ title:      Filecoin旧版调度
 subtitle:   old schedule
 date:       2023-05-18
 author:     xiaoli
-header-img: img/post-bg-debug.jpg
+header-img: img/post-bg-debug.png
 catalog: true
 tags:
     - BlockChain
@@ -13,9 +13,7 @@ tags:
 
 # 扇区存储
 
-[toc]
 
------
 ## 概览
 ![图片描述](/filecoin-img/oldsched/tapd_45270576_base64_1631155653_8.jpg)
 ##扇区状态管理逻辑

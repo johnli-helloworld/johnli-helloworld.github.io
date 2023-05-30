@@ -4,7 +4,7 @@ title:      Filecoin新版调度
 subtitle:   new schedule
 date:       2023-05-18
 author:     xiaoli
-header-img: img/post-bg-debug.jpg
+header-img: img/post-bg-debug.png
 catalog: true
 tags:
     - BlockChain
@@ -16,7 +16,7 @@ tags:
 ----
 
 ​​
-![图片描述](/filecoin-img/tapd_45270576_base64_1635991846_16.jpg)
+![图片描述](/filecoin-img/newsched/tapd_45270576_base64_1635991846_16.jpg)
 
 一些重点的函数介绍（概括）
 - requestWindows
