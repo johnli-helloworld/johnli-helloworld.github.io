@@ -19,15 +19,17 @@ tags:
 
  重复触发：
 
-    [func NewTicker(d Duration) *Ticker](https://pkg.go.dev/time#NewTicker) ， 返回一个会发送timer的channel的Ticker.调用它的Stop可以释放相关的资源。
+[func NewTicker(d Duration) *Ticker](https://pkg.go.dev/time#NewTicker) ， 返回一个会发送timer的channel的Ticker.调用它的Stop可以释放相关的资源。
 
-    [func Tick(d Duration) <-chan Time](https://pkg.go.dev/time#Tick)  ， Tick 只是对于NewTicker 的一个简单包装，提供了一个获取ticking的channel.当调用者不需要关闭这个Ticker的时候使用它，而且它不能被GC回收， 所以会"泄漏",小心使用。(有点不明白golang 为啥还要提供这个函数)
+[func Tick(d Duration) <-chan Time](https://pkg.go.dev/time#Tick)  ， Tick 只是对于NewTicker 的一个简单包装，提供了一个获取ticking的channel.当调用者不需要关闭这个Ticker的时候使用它，而且它不能被GC回收， 所以会"泄漏",小心使用。(有点不明白golang 为啥还要提供这个函数)
 
 一次性触发：
 
-    [func NewTimer(d Duration) *Timer](https://pkg.go.dev/time#NewTimer), 创建一个timer , 当过了duration以后会往它自己的channel 中发送当前时间。
-    [https://pkg.go.dev/time#After](  func After(d Duration) <-chan Time), 当过了duration 时间段后会往channel 中发送当前时间，只有当它到了指定的duration 后， 才会被GC掉。  如果为了保持高效，建议用NewTimer来配合Stop 来做。(这个After又是一个对newtimer 的包装的感觉，不需要你显示的调用Stop)
-    [func AfterFunc(d Duration, f func()) *Timer], 在等待duration 时间后，在一个goroutine 当中调用f函数。返回值是一个Timer, 可用Timer的stop 来取消调用f函数。
+[func NewTimer(d Duration) *Timer](https://pkg.go.dev/time#NewTimer), 创建一个timer , 当过了duration以后会往它自己的channel 中发送当前时间。
+
+[func After(d Duration) <-chan Time](https://pkg.go.dev/time#After), 当过了duration 时间段后会往channel 中发送当前时间，只有当它到了指定的duration 后， 才会被GC掉。  如果为了保持高效，建议用NewTimer来配合Stop 来做。(这个After又是一个对newtimer 的包装的感觉，不需要你显示的调用Stop)
+
+func AfterFunc(d Duration, f func()) *Timer, 在等待duration 时间后，在一个goroutine 当中调用f函数。返回值是一个Timer, 可用Timer的stop 来取消调用f函数。
 
  下面总结几个time 函数调用的例子：
 
