@@ -196,4 +196,4 @@ func main() {
 [记一次goroutine泄漏的问题](https://segmentfault.com/a/1190000039170906)
 
 ## 总结一下操作channel的结果
-![](/golang-img/1-2.jpg)
+![](/golang-img/channel/1-2.jpg)
